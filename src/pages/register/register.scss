@@ -1,0 +1,48 @@
+page-register {
+
+    ion-content{
+        background: url(../assets/imgs/log-reg-page.jpg);
+        background-size: 100%;
+        position: absolute;
+
+        }
+    
+    ion-label[fixed] {
+        width: 5px;
+        flex: 0 0 5px;
+        //max-width defaults to 200px
+        //if you're setting your label width wider than 200px
+        //remember to adjust the max-width as well.
+      }
+
+    .header-style{
+        color: #174055;
+    }
+    .txt-style{
+        font-size: 120%;
+    }
+    .bg-style{
+        font-weight: bold;
+        color: #174055;
+        font-size: 1.0em;
+        
+    }
+
+    .term-and-cond-style{
+        color: #174055;
+        font-size: 0.8em;  
+    }
+
+    .agree-style{
+        color: #174055;
+        font-size: 1.0em;  
+    }
+
+    .create-style{
+
+        font-weight: bold;
+        font-size: 1.0em;
+        border-radius: 7px;
+
+    }
+}

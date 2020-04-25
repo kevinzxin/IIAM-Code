@@ -1,0 +1,30 @@
+page-view-condition {
+    .header-style{
+        background: #19a9b8;
+        height: 50px;
+    }
+    .header-font{
+        color: #ffffff;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .header-button{
+        background: none;
+        font-size: 20px;
+        vertical-align: middle;
+        top: 0;
+        left: 0;
+    }
+    .header-icon{
+        color: #ffffff;
+    }
+    .button-style{
+        font-size: 1.2em;
+        border-radius: 7px;
+    }
+}

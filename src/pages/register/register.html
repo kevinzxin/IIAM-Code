@@ -1,0 +1,28 @@
+
+<ion-header >
+  <ion-navbar >
+    <ion-title>Create New Account</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+    <ion-item >
+        <ion-input color="primary" type="text" value="" class="bg-style" placeholder="E-mail" #usernameNew></ion-input>
+      </ion-item>
+    
+      
+      <ion-item >
+        <ion-input type="password" value="" class="bg-style" placeholder="Password" #passwordNew></ion-input>
+      </ion-item>
+
+    <button ion-button clear class="term-and-cond-style" (click)="viewTC()">View terms and conditions</button>
+
+    <ion-item no-lines >
+      <ion-label class="agree-style">I agree to the terms & conditions </ion-label> 
+      <ion-checkbox color="dark" [(ngModel)]="agree" (ionChange)="updateAgree()"></ion-checkbox>
+    </ion-item>
+
+  <button ion-button full class="create-style" color="secondary" (click)= "registerUser()">Create new account</button>
+
+</ion-content>

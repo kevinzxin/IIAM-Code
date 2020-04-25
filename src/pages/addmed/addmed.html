@@ -1,0 +1,157 @@
+<!--
+  Generated template for the AddmedPage page.
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+    <ion-navbar>
+      <ion-title>Add a medication to your profile</ion-title>
+    </ion-navbar>
+  
+  </ion-header>
+  
+  
+  <ion-content padding>
+    <!--Generates medication name and dose input lines-->
+    <ion-list>
+      <ion-item>
+        <ion-label floating>Medication Name:</ion-label>
+        <ion-input type="text" #medName></ion-input>
+      </ion-item>
+    
+      <ion-item>
+        <ion-label floating>Dose:</ion-label>
+        <ion-input type="text" #dose></ion-input>
+      </ion-item>
+    </ion-list>
+  
+    <!--Generates grid layout for medication dose-->
+    <ion-grid>
+        <ion-row align-items-center >
+          <ion-col >
+              <h1 ion-text color="primary" >Unit</h1>
+          </ion-col>
+          <ion-col>
+              <button itemid ="mg1" #mg ion-button full color ="primary" (click) = "btnActivate(mg, mgml, mcgml, uml, other)" >mg</button>
+          </ion-col>
+          <ion-col>
+              <button id ="mgml1" #mgml ion-button full color ="primary" (click) = "btnActivate(mgml, mg, mcgml, uml, other)">mg/ml</button>
+          </ion-col>
+          <ion-col>
+              <button id ="mcgml1" #mcgml ion-button full color ="primary" (click) = "btnActivate(mcgml, mg, mgml, uml, other)">mcg/ml</button>
+          </ion-col>
+          <ion-col>
+              <button id ="uml1" #uml ion-button full color ="primary" (click) = "btnActivate(uml, mg, mgml, mcgml, other)">U/ml</button>
+          </ion-col>
+        </ion-row >
+        <ion-row align-items-center>
+          <ion-col>
+              
+          </ion-col>
+          <ion-col>
+              <button id ="other1" #other ion-button full color ="primary" (click) = "btnActivate(other, mg, mgml, mcgml, uml)">Other</button>
+          </ion-col>
+          <ion-col>
+              <ion-list>
+                  <ion-item>
+                    <ion-label floating>Specify other unit:</ion-label>
+                    <ion-input type="text" #otherUnit></ion-input>
+                  </ion-item>
+                </ion-list>
+          </ion-col>
+          <ion-col>
+              <!--Filler slot-->
+          </ion-col>
+          <ion-col>
+              <!--Filler slot-->
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  
+    <!--Generates grid layout for administration route-->
+    <ion-grid>
+        <ion-row align-items-center >
+          <ion-col >
+              <h1 ion-text color="primary">Route:</h1>
+          </ion-col>
+          <ion-col>
+              <button id ="oral1" #oral ion-button full color ="primary" (click) = "btnActivateTwo(oral, injection, ocular, otic, inhaled, topical, otherTwo)">Oral</button>
+          </ion-col>
+          <ion-col>
+              <button id ="injection1" #injection ion-button full color ="primary" (click) = "btnActivateTwo(injection, oral, ocular, otic, inhaled, topical, otherTwo)">Injection</button>
+          </ion-col>
+          <ion-col>
+              <button id ="ocular1" #ocular ion-button full color ="primary" (click) = "btnActivateTwo(ocular, oral, injection, otic, inhaled, topical, otherTwo)">Ocular</button>
+          </ion-col>
+          <ion-col>
+              <button id ="otic1" #otic ion-button full color ="primary" (click) = "btnActivateTwo(otic, oral, injection, ocular, inhaled, topical, otherTwo)">Otic</button>
+          </ion-col>
+        </ion-row >
+  
+        <ion-row align-items-center>
+          <ion-col>
+              <!--Filler slot-->
+          </ion-col>
+          <ion-col>
+              <button id ="inhaled1" #inhaled ion-button full color ="primary" (click) = "btnActivateTwo(inhaled, oral, injection, ocular, otic, topical, otherTwo)">Inhaled</button>
+          </ion-col>
+          <ion-col>
+              <button id ="topical1" #topical ion-button full color ="primary" (click) = "btnActivateTwo(topical, oral, injection, ocular, otic, inhaled, otherTwo)">Topical</button>
+          </ion-col>
+          <ion-col>
+              <button id ="other2" #otherTwo ion-button full color ="primary" (click) = "btnActivateTwo(otherTwo, oral, injection, ocular, otic, inhaled, topical)">Other</button>
+          </ion-col>
+          <ion-col>
+              <ion-list>
+                  <ion-item>
+                    <ion-label floating>Specify other route:</ion-label>
+                    <ion-input type="text" #otherDose></ion-input>
+                  </ion-item>
+                </ion-list>
+          </ion-col>
+        </ion-row>
+  
+    
+      </ion-grid>
+  
+  <!--Generates grid layout for frequency-->
+  <ion-grid>
+      <ion-row align-items-center >
+          <ion-col >
+              <h1 ion-text color="primary">Frequency (how often do you take this medication):</h1>
+          </ion-col>
+      </ion-row>
+  
+      <ion-row align-items-center >
+          <ion-col >
+              <ion-item>
+                  <ion-label floating>Specify frequency:</ion-label>
+                  <ion-input type="text" #frequency></ion-input>
+                </ion-item>
+          </ion-col>
+          <ion-col >
+              <!--Filler-->
+          </ion-col>
+      </ion-row>
+  
+  
+  
+  </ion-grid>
+  
+  <!--Creates submission button-->
+  <ion-grid>
+  <ion-row align-items-center >
+      <ion-col >
+        <!--Filler-->
+      </ion-col>
+      <ion-col >
+          <button ion-button full (click)= "complete()">Complete</button>
+      </ion-col>
+      <ion-col >
+        <!--Filler-->
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+  </ion-content>
+

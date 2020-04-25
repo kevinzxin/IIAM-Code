@@ -1,0 +1,36 @@
+page-first {
+    ion-content{
+        background: url(../assets/imgs/log-reg-page.jpg);
+        background-size: 100%;
+        position: absolute;
+       
+    }
+
+    ion-label[fixed] {
+        width: 5px;
+        //flex: 0 0 5px;
+        //max-width defaults to 200px
+        //if you're setting your label width wider than 200px
+        //remember to adjust the max-width as well.
+      }
+
+    .bg-style{
+        font-weight: bold;
+        color: #174055;
+        font-size: 1.0em;
+        
+    }
+
+    .login-style{
+        font-weight: bold;
+        font-size: 1.2em;
+        border-radius: 7px;
+
+    }
+
+    .txt-style{
+        font-size: 100%;
+    }
+
+    .scroll-content{ padding-bottom: 0 !important; }
+}

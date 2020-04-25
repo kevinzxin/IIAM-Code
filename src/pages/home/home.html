@@ -1,0 +1,40 @@
+<ion-header class="header-style">
+<ion-row>
+  <ion-col col-2>
+  </ion-col >
+  <ion-col col-8>
+    <ion-label class="header-font">Home Page</ion-label>
+  </ion-col>
+  <ion-col col-2 >
+    <button ion-button class="header-button" (click)="signOut()" clear icon-only float-right ><ion-icon name="md-lock" class="header-icon"></ion-icon></button>
+  </ion-col>
+</ion-row>
+</ion-header>
+
+<ion-content padding >
+<ion-row>
+  <ion-col>
+    <div><img src="assets/imgs/aboutMe.jpg" (click)="openAboutMe()"></div>
+  </ion-col>
+  <ion-col>
+      <div><img src="assets/imgs/myAbilities.jpg" (click)="openMyAbilities()"></div>
+  </ion-col>
+  <ion-col>
+    <div><img src="assets/imgs/myMedications.jpg" (click)="openMyMedications()"></div>
+  </ion-col>
+</ion-row>
+
+<ion-row>
+    <ion-col>
+      <div><img src="assets/imgs/myConditions.jpg" (click)="openMyConditions()"></div> 
+    </ion-col>
+    <ion-col>
+        <div><img src="assets/imgs/myRecords.jpg" (click)="openMyRecords()"></div>
+    </ion-col>
+    <ion-col>
+      <div><img src="assets/imgs/mySummary.jpg" (click)="openSummary()"></div>
+    </ion-col>
+  </ion-row>
+
+</ion-content>
+

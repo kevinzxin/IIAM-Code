@@ -1,0 +1,41 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Document</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button full type="submit" class="login-style" color="secondary" (click)= takePicture()>Add a Picture</button>
+
+  <ion-card *ngFor="let entry of displayImages">
+  <img [src]="entry" style="width: 100%" >
+  </ion-card>
+
+  <form [formGroup] = "formGroup" (ngSubmit) = "saveDocument(formGroup.value)">
+    <ion-item>
+      <ion-label>Document Name:</ion-label>
+      <ion-input type="text" name="documentName" formControlName="documentName" required></ion-input>
+      <div class="alert" *ngIf="!formGroup.controls['documentName'].valid && formGroup.controls['documentName'].touched">
+        {{documentNameAlert}}
+      </div>
+    </ion-item> 
+
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" name="date" formControlName="date"></ion-datetime>
+      <div class="alert" *ngIf="!formGroup.controls['date'].valid && formGroup.controls['date'].touched">
+        {{dateAlert}}
+      </div>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Pages in document:</ion-label>
+      <ion-input type="text" name="numPages" formControlName="numPages"></ion-input>
+    </ion-item>
+    <div class="alert" *ngIf="!formGroup.controls['numPages'].valid && formGroup.controls['numPages'].touched">
+      {{numPagesAlert}}
+    </div>
+
+    <button ion-button type="submit" [disabled]="!formGroup.valid" class="login-style" color="secondary" full>Save Document</button>
+  </form>
+</ion-content>

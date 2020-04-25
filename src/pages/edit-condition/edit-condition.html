@@ -1,0 +1,38 @@
+<ion-header class="header-style">
+  <ion-row>
+    <ion-col col-2></ion-col >
+    <ion-col col-8>
+        <ion-label class="header-font">Edit Condition</ion-label>
+    </ion-col>
+    <ion-col col-2></ion-col>
+  </ion-row>
+</ion-header>
+
+
+<ion-content padding>
+    <img [src]="condition.img" style="width: 100%" [hidden]="condition.img == null" (click)="retakePicture()">
+
+<form [formGroup]="formGroupEdit" (ngSubmit)=updateEditedCondition(formGroupEdit.value)>
+
+  <ion-item>
+    <ion-label>Condition</ion-label>
+    <ion-input type="text" name="name" formControlName="name" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Symptoms:</ion-label>
+    <ion-textarea type="text" name="symptoms" rows="4" formControlName="symptoms" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Management:</ion-label>
+    <ion-textarea type="text" name="management" rows="4" formControlName="management" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Additional Comments:" type="text" name="addComments" rows="4" formControlName="addComments"></ion-textarea>
+  </ion-item>
+
+  <button ion-button type="submit" [disabled]="!formGroupEdit.valid" class="login-style" color="secondary" full>Save</button>
+</form>
+</ion-content>

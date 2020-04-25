@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Medication</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button type="submit" class="login-style" color="secondary" (click)="takePicture()" full>Add a picture</button>
+  <img [src]="displayImage" style="width: 100%" [hidden]="displayImage === null">
+  
+  <form [formGroup]="formGroup" (ngSubmit)="saveMedication(formGroup.value)">
+
+  <ion-item>
+    <ion-label>Medication name:</ion-label>
+    <ion-input type="text" name="name" formControlName="name" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Dose:</ion-label>
+    <ion-input type="text" name="dose" formControlName="dose" required></ion-input>
+  </ion-item>
+
+<ion-item>
+  <ion-label>Dose unit:</ion-label>
+  <ion-select [(ngModel)]="unit" formControlName="unit" interface="popover" required>
+    <ion-option value="mg">mg</ion-option>
+    <ion-option value="mg/ml">mg/ml</ion-option>
+    <ion-option value="mcg/ml">mcg/ml</ion-option>
+    <ion-option value="U/ml">U/ml</ion-option>
+    <ion-option value="Other">Other</ion-option>
+  </ion-select>  
+</ion-item>
+
+<ion-item>
+  <ion-textarea placeholder="Additional dose info:" type="text" name="unitComments" formControlName="unitComments" rows="4"></ion-textarea>
+</ion-item>
+
+<ion-item>
+  <ion-label>Route:</ion-label>
+  <ion-select [(ngModel)]="route" formControlName="route" interface="popover" required>
+    <ion-option value="Oral">Oral</ion-option>
+    <ion-option value="Injection">Injection</ion-option>
+    <ion-option value="Ocular">Ocular</ion-option>
+    <ion-option value="Otic">Otic</ion-option>
+    <ion-option value="Other">Other</ion-option>
+  </ion-select>  
+</ion-item>
+
+<ion-item>
+  <ion-textarea placeholder="Additional route info:" type="text" name="routeComments" formControlName="routeComments" rows="4"></ion-textarea>
+</ion-item>
+
+<ion-item>
+    <ion-label>Frequency:</ion-label>
+    <ion-textarea type="text" name="frequency" formControlName="frequency" rows="2" required></ion-textarea>
+  </ion-item>
+
+<button ion-button type="submit" class="login-style" color="secondary" full>Save</button>
+
+</form>
+</ion-content>

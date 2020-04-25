@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Condition</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+<button ion-button type="submit" class="login-style" color="secondary" (click)="takePicture()" full>Add a picture</button>
+<img [src]="displayImage" style="width: 100%" [hidden]="displayImage === null">
+
+<form [formGroup]="formGroup" (ngSubmit)="saveCondition(formGroup.value)">
+  
+  <ion-item>
+    <ion-label>Condition</ion-label>
+    <ion-input type="text" name="name" formControlName="name" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Symptoms:" type="text" name="symptoms" rows="4" formControlName="symptoms" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Management" type="text" name="management" rows="4" formControlName="management" required></ion-textarea>
+  </ion-item>
+
+  <ion-item>
+    <ion-textarea placeholder="Additional Comments:" type="text" name="addComments" rows="4" formControlName="addComments"></ion-textarea>
+  </ion-item>
+
+  <button ion-button type="submit" [disabled]="!formGroup.valid" class="login-style" color="secondary" full>Save</button>
+</form>
+</ion-content>

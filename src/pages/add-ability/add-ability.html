@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Add Ability</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <button ion-button type="submit" class="login-style" color="secondary" (click)="takePicture()" full>Add a Picture</button>
+  <img [src]="displayImage" style="width: 100%" [hidden]="displayImage === null">
+
+  <form [formGroup]="formGroup" (ngSubmit)="saveAbility(formGroup.value)">
+
+    <ion-item>
+      <ion-label>Ability</ion-label>
+      <ion-input type="text" name="Ability" formControlName="ability" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Select</ion-label>
+      <ion-select [(ngModel)]="selection" formControlName="selection" required>
+        <ion-option value="Can independently perform task">Can independently perform task</ion-option>
+        <ion-option value="Can partly perform task">Can partly perform task</ion-option>
+        <ion-option value="Needs help performing task">Needs help performing task</ion-option>
+      </ion-select>  
+    </ion-item>
+
+    <ion-item>
+      <ion-textarea placeholder="Additional Comments:" type="text" name="comment" rows="4" formControlName="content" required></ion-textarea>
+    </ion-item>
+
+    <button ion-button type="submit" [disabled]="!formGroup.valid" class="login-style" color="secondary" full>Save</button>
+
+  </form>
+</ion-content>

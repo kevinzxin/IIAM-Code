@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Biographic information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <form [formGroup]="formGroup" (ngSubmit)="saveBioInfo(formGroup.value)">
+
+  <ion-item>
+    <ion-label>Name</ion-label>
+    <ion-input type="text" name="name" formControlName="name" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Age</ion-label>
+    <ion-input type="text" name="age" formControlName="age" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Gender</ion-label>
+    <ion-input type="text" name="gender" formControlName="gender" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label>Allergies</ion-label>
+    <ion-input type="text" name="allergies" formControlName="allergies" required></ion-input>
+  </ion-item>
+
+  <button ion-button type="submit" [disabled]="!formGroup.valid" class="login-style" color="secondary" full>Save</button>
+
+
+  </form>
+</ion-content>

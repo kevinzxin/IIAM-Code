@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>Add Image</ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    <button ion-button type="submit" class="login-style" color="secondary" (click)="takePicture()" full>Add a picture</button>
+    <img [src]="displayImage" style="width:100%" [hidden]="displayImage === null">
+
+    <form [formGroup]="formGroup" (ngSubmit)="saveImgNote(formGroup.value)">
+
+    <ion-item>
+      <ion-label>Date:</ion-label>
+      <ion-datetime displayFormat="MM/DD/YYYY" formControlName="date"></ion-datetime>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Title:</ion-label>
+      <ion-input type="text" name="title" formControlName="title" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label>Note:</ion-label>
+      <ion-textarea type="text" name="content" formControlName="content" rows="4"></ion-textarea>
+    </ion-item>
+
+    <button ion-button type="submit" class="login-style" color="secondary">Save</button>
+  
+  </form>
+  </ion-content>

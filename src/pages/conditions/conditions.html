@@ -1,0 +1,26 @@
+<ion-header class="header-style">
+  <ion-row>
+    <ion-col col-2>
+      <button ion-button class="header-button" (click)="homeFromFour()" clear icon-only float-left><ion-icon name="md-arrow-back" class="header-icon"></ion-icon></button>
+    </ion-col >
+    <ion-col col-8>
+        <ion-label class="header-font">My Conditions</ion-label>
+    </ion-col>
+    <ion-col col-2 >
+        <button ion-button class="header-button" (click)="openMenuFour()" clear icon-only float-right><ion-icon name="md-create" class="header-icon"></ion-icon></button>
+    </ion-col>
+  </ion-row>
+  </ion-header>
+
+
+<ion-content padding>
+
+  <ion-card *ngFor="let condition of conditionsArray | async" (click)="getCondition(condition.createDate)">
+    <img [src]= condition.img style="width: 100%" [hidden]="condition.img == null">
+    <h3 class="card-style-border-top">Condition: {{condition.name}}</h3>
+    <h3 class="card-style-middle">Symptoms: {{condition.symptoms}}</h3>
+    <h3 class="card-style-middle">Management: {{condition.management}}</h3>
+    <h3 class="card-style-border-bottom">Additional comments: {{condition.addComments}}</h3>
+  </ion-card>
+
+</ion-content>

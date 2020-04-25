@@ -1,0 +1,42 @@
+page-my-ability {
+
+    .header-style{
+        background: #19a9b8;
+        height: 50px;
+    }
+    .header-font{
+        color: #ffffff;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .header-button{
+        background: none;
+        font-size: 20px;
+        vertical-align: middle;
+        top: 0;
+        left: 0;
+    }
+    .header-icon{
+        color: #ffffff;
+    }
+    .card-style-border-top{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-top: 10px;
+    }
+    .card-style-middle{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .card-style-border-bottom{
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 10px;
+    }
+
+}

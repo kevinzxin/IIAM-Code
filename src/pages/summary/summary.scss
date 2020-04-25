@@ -1,0 +1,46 @@
+page-summary {
+    .header-style{
+        background: #19a9b8;
+        height: 50px;
+    }
+    .header-font{
+        color: #ffffff;
+        font-size: 25px;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    .header-button{
+        background: none;
+        font-size: 20px;
+        vertical-align: middle;
+        top: 0;
+        left: 0;
+    }
+    .header-icon{
+        color: #ffffff;
+    }
+    .section-title-font{
+        margin-left: 15px;
+    }
+    .card-style-border-top{
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-top: 2px;
+    }
+    .card-style-middle{
+        margin-left: 2px;
+        margin-right: 2px;
+    }
+    .card-style-border-bottom{
+        margin-left: 2px;
+        margin-right: 2px;
+        margin-bottom: 2px;
+    }
+    .spacer{
+        margin-top: 10px;
+    }
+}

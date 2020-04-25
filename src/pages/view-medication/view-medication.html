@@ -1,0 +1,33 @@
+
+<ion-header class="header-style">
+  <ion-row>
+    <ion-col col-2>
+      <button ion-button class="header-button" (click)="return()" clear icon-only float-left><ion-icon name="md-arrow-back" class="header-icon"></ion-icon></button>
+    </ion-col >
+    <ion-col col-8>
+        <ion-label class="header-font">View Medication</ion-label>
+    </ion-col>
+    <ion-col col-2 >
+    </ion-col>
+  </ion-row>
+</ion-header>
+
+<ion-content padding>
+  <ion-card>
+    <ion-card-content>
+      <img [src]= medication.img style="width: 100%" [hidden]="medication.img == null">
+      <ion-card-title>
+        {{medication.name}}
+      </ion-card-title>
+      <h3>Dosing: {{medication.dose}} {{medication.unit}}</h3>
+      <h3>Route: {{medication.route}}</h3>
+      <h3>Frequency: {{medication.frequency}}</h3>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>
+
+<ion-footer>
+  <button ion-button class="button-style" color="secondary" block (click)= "editMedication()">Edit Medication</button>
+  <button ion-button class="button-style" color="secondary" block (click)= "deleteMedication(medication.createDate)">Delete Medication</button>
+</ion-footer>
